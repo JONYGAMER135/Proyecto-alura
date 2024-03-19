@@ -1,2 +1,2 @@
-exclude:
-  - assets/css/style.scss
+sass:
+  sass_dir: none
