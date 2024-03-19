@@ -66,6 +66,12 @@ function desencriptar(stringDesencriptada){
 
 function btnCopiar() {
     var copyText = document.querySelector(".mensaje");
-    copyText.select();
-    document.exeCommand("copy");
+    if (navigator.clipboard) {
+    
+        navigator.clipboard.writeText(copyText.value);
+    } else {
+    
+        copyText.select();
+        document.execCommand("copy");
+    }
 }
